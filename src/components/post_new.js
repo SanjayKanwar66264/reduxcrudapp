@@ -22,14 +22,14 @@ class PostNew extends Component {
     render() {
         const {fields:{title, categories, content}, handleSubmit} = this.props;
         return (
-            <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+            <form onSubmit={handleSubmit(this.onSubmit.bind(x))}>
                 <h3>Create New Post</h3>
                 <div className={`form-group ${title.touched && title.invalid ? 'has-danger' : ''}`}>
                     <label> Title</label>
                     <input type="text" className="form-control" {...title}/>
                     <div className="text-help">
                         {title.touched ? title.error : ''}
-                    </div>
+                    </div>x
                 </div>
                 <div className={`form-group ${categories.touched && categories.invalid ? 'has-danger' : ''}`}>
                     <label> Categories</label>
